@@ -233,4 +233,4 @@ You have successfully completed this lab! Let’s take a look at what you learne
 - Created a Route on OpenShift.
 - Accessed an application through a web browser.
 
-<strong> [Next: Rollout Updates for Kubernetes Application Lab](https://developer.ibm.com/tutorials/private_lab4-update-kubernetes-app/) </strong>
+

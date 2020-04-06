@@ -1,4 +1,4 @@
-# IBM Cloud Pak for Applications Program - Badge
+# IBM Cloud Pak for Applications - Badge Program
 
 ## Tech Talk Slides
 

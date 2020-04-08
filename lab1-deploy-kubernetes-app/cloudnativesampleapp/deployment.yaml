@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: "greetings-deployment"
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  template:
+    metadata:
+      labels:
+        app: "greetings"
+    spec:
+      containers:
+      - name: "greeting"
+        image: "ibmcase/greeting:1"
+        imagePullPolicy: "IfNotPresent"
+        env:
+          - name: PORT
+            value: "9080"
+          - name: APPLICATION_NAME
+            value: "greetings"

@@ -28,15 +28,15 @@ $ oc new-app https://github.com/IBM/openshift-on-ibm-cloud-workshops --context-d
 
 As result you'll get this output.
 
-<kbd><img src="images/lab-6-step-2-1.png" /></kbd>
+<kbd><img src="images/image1.png" /></kbd>
 
 A build will be triggered and run on OpenShift.
 
-<kbd><img src="images/lab-6-step-2-2.png" /></kbd>
+<kbd><img src="images/image2.png" /></kbd>
 
-After the build the pod and the service will be deployed. Note that the healthchecks defined in the yaml file are missing, since the yaml files are not used. Instead OpenShift uses intelligent defaults for as many settings as possible. 
+After the build the pod and the service will be deployed. Note that the healthchecks defined in the yaml file are missing, since the yaml files are not used. Instead OpenShift uses intelligent defaults for as many settings as possible.
 
-<kbd><img src="images/lab-6-step-2-3.png" /></kbd>
+<kbd><img src="images/image3.png" /></kbd>
 
 ### Step 3
 
@@ -51,6 +51,6 @@ To test the deployment, append '/openapi/ui' to the URL in the output of 'oc get
 
 This is the deployed application with the route.
 
-<kbd><img src="images/lab-6-step-3.png" /></kbd>
+<kbd><img src="images/image4.png" /></kbd>
 
 ---

@@ -64,7 +64,14 @@ $ oc expose svc authors-git
 $ oc get route
 ```
 
-To test the deployment, append '/openapi/ui' to the URL in the output of 'oc get route/openshift-on-ibm-cloud-workshops' and open it in a browser.
+You should see the followig output:
+
+```shell
+NAME               HOST/PORT                                PATH      SERVICES           PORT      TERMINATION   WILDCARD
+authors-git   authors-git-deployment-from-github-{project}.{subdomain}             authors-git   3000-tcp                    None
+```
+
+To test the deployment, append '/openapi/ui' to the URL in the output of 'oc get route' and open it in a browser.
 
 This is the deployed application with the route.
 

@@ -40,11 +40,28 @@ After the build the pod and the service will be deployed. Note that the healthch
 
 ### Step 3
 
+To verify your service is created:
+
+Verify Service
+
+```shell
+oc get svc
+```
+
+You should see the followig output:
+
+```shell
+NAME               TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+authors-git        ClusterIP   172.21.142.205   <none>       3000/TCP   13m
+```
+
+### Step 4
+
 In the last step create a route.
 
 ```
-$ oc expose svc/openshift-on-ibm-cloud-workshops
-$ oc get route/openshift-on-ibm-cloud-workshops
+$ oc expose svc authors-git
+$ oc get route
 ```
 
 To test the deployment, append '/openapi/ui' to the URL in the output of 'oc get route/openshift-on-ibm-cloud-workshops' and open it in a browser.

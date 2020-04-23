@@ -34,7 +34,7 @@ A build will be triggered and run on OpenShift. To verify the build on OpenShift
 
 <kbd><img src="images/Cluster.png" /></kbd>
 
-From the list of projects, select your projects
+From the list of projects, select your project
 
 <kbd><img src="images/Console.png" /></kbd>
 

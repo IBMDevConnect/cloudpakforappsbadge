@@ -30,11 +30,27 @@ As result you'll get this output.
 
 <kbd><img src="images/image1.png" /></kbd>
 
-A build will be triggered and run on OpenShift.
+A build will be triggered and run on OpenShift. To verify the build on OpenShift, open the OpenShift Web Console as shown below.
+
+<kbd><img src="images/Cluster.png" /></kbd>
+
+From the list of projects, select your projects
+
+<kbd><img src="images/Console.png" /></kbd>
+
+Navigate to the Builds from the left side of the OpenShift Web Console as shown below
+
+<kbd><img src="images/Build.png" /></kbd>
+
+You will be able to see the build triggered.
 
 <kbd><img src="images/image2.png" /></kbd>
 
-After the build the pod and the service will be deployed. Note that the healthchecks defined in the yaml file are missing, since the yaml files are not used. Instead OpenShift uses intelligent defaults for as many settings as possible.
+After the build, the service will be deployed. To verify the deployment, navigate to the Deployments as shown below
+
+<kbd><img src="images/Deployment.png" /></kbd>
+
+Click on the configuration section to get the details
 
 <kbd><img src="images/image3.png" /></kbd>
 

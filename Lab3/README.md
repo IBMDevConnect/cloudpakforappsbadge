@@ -42,11 +42,9 @@ Navigate to the Builds from the left side of the OpenShift Web Console as shown 
 
 <kbd><img src="images/Build.png" /></kbd>
 
-
 You will be able to see the build triggered.
 
 <kbd><img src="images/image2.png" /></kbd>
-
 
 After the build, the service will be deployed. To verify the deployment, navigate to the Deployments as shown below
 

@@ -12,9 +12,7 @@ In this exercise, you will deploy a simple "Hello World" Node.js application.
 
 URL: https://www.katacoda.com/openshift/courses/playgrounds/openshift311
 
-S2I Lab:
-
-Here Source Code is https://github.com/IBMDevConnect/node-hello
+S2I Lab: Here Source Code is https://github.com/IBMDevConnect/node-hello
 
 And the Builder Image here is node.js version 8
 
@@ -33,7 +31,7 @@ Verify Service
 oc get svc
 ```
 
-### Step 4. In the last step, create a route.
+### Step 4. Create a route.
 
 ```
 $ oc expose svc node-hello
@@ -43,10 +41,16 @@ $ oc expose svc node-hello
 $ oc get route
 ```
 
-### Step 5: Test the applications
+### Step 5: Test the application
 
 ```
 curl node-hello-default.2886795277-80-cykoria05.environments.katacoda.com
+```
+
+### Step 6: View the pods
+
+```
+oc get pod
 ```
 
 Congratulations! You have completed this workshop!

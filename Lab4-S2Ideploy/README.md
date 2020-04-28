@@ -41,13 +41,13 @@ $ oc expose svc node-hello
 $ oc get route
 ```
 
-### Step 5: Test the application
+### Step 5. Test the application
 
 ```
 curl node-hello-default.2886795277-80-cykoria05.environments.katacoda.com
 ```
 
-### Step 6: View the pods
+### Step 6. View the pods
 
 ```
 oc get pod

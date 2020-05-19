@@ -18,33 +18,33 @@ This documentation is focused to install and configure the Codeready workspace i
 
 **Ensure you have the Administrator Permission to install the Code-Ready Operator. Highlighted as below**
 
-![Cloud Login](images/Picture 2.png)
+![Cloud Login](images/Picture2.png)
 
 ### Step 6: Now Navigate to the Operators in the left Pane and then navigate to the operators Hub.
 
 **Select the Project where you want to install the Codeready operator**
 
-![Cloud Login](images/Picture 3.png)
+![Cloud Login](images/Picture3.png)
 
 ### Step 7: Search the Filter using “CodeReady Workspace”.  This filters to the Code Ready workspace Operator as shown below
 
-![Cloud Login](images/Picture 4.png)
+![Cloud Login](images/Picture4.png)
 
 ### Step 8:Double click the Operator Filtered and this will navigate to the Installation User interface
 
-![Cloud Login](images/Picture 5.png)
+![Cloud Login](images/Picture5.png)
 
 ### Step 9:Now Click on the Install button highlighted in Blue color. This will navigate to capture the environment information required for installing the operator.
 
 **Re-confirm/Ensure the operator to be installed In the correct namespace/project**
 
-![Cloud Login](images/Picture 6.png)
+![Cloud Login](images/Picture6.png)
 
 ### Step 9:Once confirming the parameters, Subscribe the Codeready workspace operator.
 
 ### Step 10:Once you scribe the operator shall get installed and appear as part of the “Installed Operators” in the Left Nav.
 
-![Cloud Login](images/Picture 7.png)
+![Cloud Login](images/Picture7.png)
 
 
 

@@ -45,10 +45,3 @@ This documentation is focused to install and configure the Codeready workspace i
 ### Step 10:Once you scribe the operator shall get installed and appear as part of the “Installed Operators” in the Left Nav.
 
 ![Cloud Login](images/Picture7.png)
-
-
-
-
-
-
-Congratulations! You have completed this workshop!

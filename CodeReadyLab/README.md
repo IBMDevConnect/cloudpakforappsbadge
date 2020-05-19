@@ -8,7 +8,7 @@ This documentation is focused to install and configure the Codeready workspace i
 
 ### Step 3: Access the OCP Cluster that is provisioned. The Provisioned OCP Cluster Overview screen appears as below
 
-![Cloud Login](images/Picture 1.png)
+![Cloud Login](images/Picture1.png)
 
 ### Step 4: Open the Openshift web console. It can be accessed by clicking the button that appears “Openshift web console” in blue at the top of OCP Cluster Overview Screen. Please refer to the image in step 3
 

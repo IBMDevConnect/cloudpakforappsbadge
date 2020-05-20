@@ -1,4 +1,4 @@
-# Setting up developer workspace
+# Setting up developer workspace and running Node.js application
 
 #### The below document helps to setup the developer project workspace in Code Ready provided IDE
 

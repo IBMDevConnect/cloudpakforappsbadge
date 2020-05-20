@@ -16,13 +16,13 @@ This documentation is focused to install and configure the Codeready workspace i
 
 ### Step 5: The navigation will take you to the dashboard view of the OCP Console as below:
 
-**Ensure you have the Administrator Permission to install the Code-Ready Operator. Highlighted as below**
+Ensure you have the Administrator Permission to install the Code-Ready Operator. Highlighted as below
 
 ![Cloud Login](images/Picture2.png)
 
 ### Step 6: Now Navigate to the Operators in the left Pane and then navigate to the operators Hub.
 
-**Select the Project where you want to install the Codeready operator**
+Select the Project where you want to install the Codeready operator
 
 ![Cloud Login](images/Picture3.png)
 
@@ -36,7 +36,7 @@ This documentation is focused to install and configure the Codeready workspace i
 
 ### Step 9:Now Click on the Install button highlighted in Blue color. This will navigate to capture the environment information required for installing the operator.
 
-**Re-confirm/Ensure the operator to be installed In the correct namespace/project**
+Re-confirm/Ensure the operator to be installed In the correct namespace/project
 
 ![Cloud Login](images/Picture6.png)
 
@@ -56,7 +56,7 @@ Once the Code-Ready Workspace operator is installed, the next step is to install
 
 ## Step 12: The page will navigate to the “CheCluster” page with list of clusters that is already installed and have “Create CheCluster” Button highlighted in “blue”.
 
-**Please note, at very first time, the page will have only “Create CheCluster” Button with no list as there is no cluster configured yet.**
+Please note, at very first time, the page will have only “Create CheCluster” Button with no list as there is no cluster configured yet.
 
 ![Cloud Login](images/Picture9.png)
 
@@ -66,7 +66,7 @@ Otherwise,
 
 The changes can also be done using the “Edit Form” link in the top left of the page
 
-**Please note, Yaml Edit will give full control of the Object Creation. The form may not represent all the properties supported by YAML**
+Please note, Yaml Edit will give full control of the Object Creation. The form may not represent all the properties supported by YAML
 
 ![Cloud Login](images/Picture10.png)
 
@@ -74,7 +74,7 @@ As part of this installation, the following changes to be done before creating t
 
 Initially the cluster can be setup without an SSO provided through oAuth (Log in to CodeReady Workspaces with OpenShift credentials).
 
-**Please note oAuth of Openshit is one of the ways for SSO. Alternatively, External Identify Provider can also be configured for the SSO.**
+Please note oAuth of Openshit is one of the ways for SSO. Alternatively, External Identify Provider can also be configured for the SSO.
 
 1. By default, the Openshift oAuth parameter is true.
 

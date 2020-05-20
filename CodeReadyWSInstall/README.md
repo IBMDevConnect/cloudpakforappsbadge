@@ -66,9 +66,9 @@ Please note, Yaml Edit will give full control of the Object Creation. The form m
 
 ![Cloud Login](images/Picture10.png)
 
-## As part of this installation, the following changes to be done before creating the Cluster. Admin can choose either ways by directly updating the Yaml or through the “EditForm” Link
+#### As part of this installation, the following changes to be done before creating the Cluster. Admin can choose either ways by directly updating the Yaml or through the “EditForm” Link
 
-## Initially the cluster can be setup without an SSO provided through oAuth (Log in to CodeReady Workspaces with OpenShift credentials).
+#### Initially the cluster can be setup without an SSO provided through oAuth (Log in to CodeReady Workspaces with OpenShift credentials).
 
 Please note oAuth of Openshit is one of the ways for SSO. Alternatively, External Identify Provider can also be configured for the SSO.
 
@@ -86,19 +86,19 @@ Please note oAuth of Openshit is one of the ways for SSO. Alternatively, Externa
 
 ### We need to configure two parameter additionally, they are
 
-#### a.	postgresPVCStorageClassName
+**a.	postgresPVCStorageClassName**
 
-####  b.	workspacePVCStorageClassName:
+**b.	workspacePVCStorageClassName:**
 
 ### By default in “Edit Form” these parameter will be empty. In the Yaml Edit these parameter would have not been defined.
 
-### As we have postgres database part of the installation, PVC Storage Class Name and workspacePVCStorageClassName has be defined. The storage class name can be picked from on the storage classes that defined in the Cluster.
+#### As we have postgres database part of the installation, PVC Storage Class Name and workspacePVCStorageClassName has be defined. The storage class name can be picked from on the storage classes that defined in the Cluster.
 
-### In current scenario, we have used PVC Storage Class defined part of the IBM Cloud. We have choosen “ibmc-block-gold” for both the parameters:
+#### In current scenario, we have used PVC Storage Class defined part of the IBM Cloud. We have choosen “ibmc-block-gold” for both the parameters:
 
-#### a.	postgresPVCStorageClassName: ibmc-block-gold
+ **a.	postgresPVCStorageClassName: ibmc-block-gold**
 
-#### b.	workspacePVCStorageClassName: ibmc-block-gold
+ **b.	workspacePVCStorageClassName: ibmc-block-gold**
 
 ### The EditForm for storage looks like
 

@@ -2,9 +2,9 @@
 
 This documentation is focused to install and configure the Codeready workspace in the IBM Cloud OCP Cluster 4.3. The steps regarding the installation and configuration are detailed out as below:
 
-### Step 1: Login to the IBM Cloud Environment.
+**Step 1: Login to the IBM Cloud Environment.
 
-### Step 2: Ensure you have provisioned the OCP4.3 Cluster in the  IBM Cloud.
+**Step 2: Ensure you have provisioned the OCP4.3 Cluster in the  IBM Cloud.
 
 ### Step 3: Access the OCP Cluster that is provisioned. The Provisioned OCP Cluster Overview screen appears as below
 

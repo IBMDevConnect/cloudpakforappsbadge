@@ -26,6 +26,14 @@ Select the Project where you want to install the Codeready operator
 
 ![Cloud Login](images/Picture3.png)
 
+You can create a new project as follows:
+
+![Cloud Login](images/Select.png)
+
+![Cloud Login](images/Project.png)
+
+
+
 **Step 7:** Search the Filter using “CodeReady Workspace”.  This filters to the Code Ready workspace Operator as shown below
 
 ![Cloud Login](images/Picture4.png)

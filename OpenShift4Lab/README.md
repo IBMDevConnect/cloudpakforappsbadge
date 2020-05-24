@@ -67,13 +67,13 @@ Once there you will see two files: **deployment.yaml** and **service.yaml**
 
 _Drag and Drop_ the **deployment.yaml** file first.
 
-![importYAML](images/Pic3.png)
+![importYAML](images/Pic4.png)
 
 _Click_ **Create** and you will see a new **greetings** deployment in the console.
 
 For **Creating a Service** we are going to repeat the steps of **importing a YAML** just like a deployment, but instead of the **deployment.yaml** we will _Drag and Drop_ the **service.yaml**.
 
-![service](images/Pic3.png)
+![service](images/Pic4.png)
 
 After Creating the Service let’s navigate to the **Services** page to view it.
 

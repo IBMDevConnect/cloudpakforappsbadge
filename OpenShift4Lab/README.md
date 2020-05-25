@@ -39,7 +39,7 @@ In this section we will deploy the sample application that you downloaded. You c
 
 ### Deploy Kubernetes App using OpenShift Console
 
-With the OpenShift Console open, let’s **Create a Project** named **deploy-sample**
+With the OpenShift Console open, let’s **Create a Project**
 
 #### Create Project
 
@@ -87,15 +87,17 @@ On this page you can see your new service named **greeting-service**. You can cl
 
 Now we need to **Create a Route** for our new service to be reach by users outside of the cluster.
 
-On the service details page, find the **Create Route** button and _Click it_.
+Navigate to the project Details from the left as shown below
 
 ![createRoute](images/Routes1.png)
+
+On the service details page, find the **Create Route** button and _Click it_.
 
 ![createRoute](images/Routes2.png)
 
 This will open a form with values prepopulated for **Creating a Route**. Give the service name, select your service which is just created and _Click_ **Create**.
 
-![serviceRoute](images/Route3.png)
+![serviceRoute](images/Routes3.png)
 
 Select the Target Port
 

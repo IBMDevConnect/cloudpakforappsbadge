@@ -31,7 +31,7 @@ From this screen there are two options. One is using the **OpenShift Console** a
 
 ## Getting the Sample Application
 
-Download the sample application from Github: [Sample App](https://github.com/IBMDevConnect/cloudpakforappsbadge/tree/master/lab1-deploy-kubernetes-app/cloudnativesampleapp)
+Download the sample application from Github: [Sample App](https://github.com/ibm-cloud-architecture/cloudnative_sample_app/tree/Basic-Tutorial)
 
 ## Deploying the Sample Application
 

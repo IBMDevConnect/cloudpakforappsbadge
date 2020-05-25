@@ -77,11 +77,11 @@ For **Creating a Service** we are going to repeat the steps of **importing a YAM
 
 After Creating the Service let’s navigate to the **Services** page to view it.
 
-![services page](images/services-page.png)
+![services page](images/service2.png)
 
 On this page you can see your new service named **greeting-service**. You can click on the service to view details about it.
 
-![newService](images/newService.png)
+![newService](images/service1.png)
 
 #### Create a Route
 

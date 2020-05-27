@@ -204,7 +204,7 @@ After executing these commands you should see this:
 
 If you look in the OpenShift Web Console now, you will see that the build failed -- which is to be expected:
 
-![](images/lab-7-step-7-1.png)
+![](images/lab7-step-7-1.png)
 
 Before the microservice can be deployed with the image builder, the code (or more precisely 'authors.war' and 'server.xml') need to be uploaded to OpenShift. This is done via 'oc start-build'.
 

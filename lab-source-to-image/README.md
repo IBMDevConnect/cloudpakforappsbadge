@@ -85,6 +85,17 @@ $ ROOT_FOLDER=$(pwd)
 
 Congratulations, you have completed your Pre-requisites for this lab. So now let us get started with the execution :
 
+## Overview of the microservice used in this lab:
+
+The microservice is kept as simple as possible so that it can be used as a starting point for other microservices. The microservice has been developed with Jakarta EE and [Eclipse MicroProfile](https://microprofile.io/). It is part of our [Cloud Native Starter](https://github.com/IBM/cloud-native-starter) project which basically consists of 3 microservices:
+
+![architecture](images/cns-architecture.png)
+
+The web application Web-App (frontend) requests data from Web-API. Web-API retreives a list of articles (title and authors name) from the Articles service, and for every author it retrieves details (Blog URL and Twitter handle) from the Authors service. In this lab we only use the Authors service.
+
+This would be the frontend:
+
+![frontend](images/frontend.png)
 
 ## 1. Import of the Open Liberty Builder Image
 

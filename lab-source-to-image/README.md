@@ -76,7 +76,7 @@ $ ROOT_FOLDER=$(pwd)
 1. Login to OpenShift in IBM Cloud Shell
 
     ```
-    $ oc login https://c1XX-XX-X.containers.cloud.ibm.com:XXXXX --token=xxxxxx'
+    oc login https://c1XX-XX-X.containers.cloud.ibm.com:XXXXX --token=xxxxxx'
     ```
 
     ![oc login in cloudshell](images/oc-login-cloudshell.png)
@@ -94,8 +94,14 @@ OpenShift provides several builder images out of the box, for example for Node.j
 We need an OpenShift project, this is simply put equivalent to a Kubernetes namespace plus OpenShift security. You will be using this project throughout the whole workshop.  The easiest way is to use your own name in the form `yourfistname-yourlastname`
 
 ```
-$ oc project
+cd ${ROOT_FOLDER}/deploying-to-openshift
+oc new-project <yourfistname-yourlastname>
 ```
+
+```
+oc project
+```
+The user should be using the project created just now.
 
 Add the Open Liberty builder image to the OpenShift internal image registry:
 
@@ -107,12 +113,13 @@ Result:
 
 ```
 imagestream.image.openshift.io/s2i-open-liberty imported
+
 Name:                   s2i-open-liberty
-Namespace:              harald-uebele
+Namespace:              capg-iptesting
 Created:                Less than a second ago
 Labels:                 <none>
-Annotations:            openshift.io/image.dockerRepositoryCheck=2020-02-20T08:53:53Z
-Docker Pull Spec:       image-registry.openshift-image-registry.svc:5000/harald-uebele/s2i-open-liberty
+Annotations:            openshift.io/image.dockerRepositoryCheck=2020-05-27T18:46:28Z
+Image Repository:       image-registry.openshift-image-registry.svc:5000/capg-iptesting/s2i-open-liberty
 Image Lookup:           local=false
 Unique Images:          1
 Tags:                   1
@@ -130,7 +137,7 @@ In the OpenShift Web Console, in your own project, go to 'Builds' and 'Image Str
 
 ![s2i](images/s2i-image.png)
 
-The other images are the result of your previous deployments.
+The other images if appearing are the result of your previous deployments.
 
 ## 2. Deployment of the Microservice
 
@@ -138,31 +145,32 @@ The previous steps to install the Open Liberty builder image only have to be exe
 
 ### Step 1
 
-The image builder expects a certain directory structure of Open Liberty projects with two files:
+The image builder expects a certain directory structure of Open Liberty projects with three files:
 
-* server.xml in the root directory
+* server.xml in the root directory created 
+* pom.xml in the root directory
 * *.war file in the target directory
 
 Before the code can be pushed to OpenShift, the 'war' file (Java web archive with microservice) needs to be built with Maven. Note: Maven is installed in the IBM Cloud Shell. If you are not using Cloud Shell you need to have `mvn` installed on your laptop.
 
 ```
-$ cd ${ROOT_FOLDER}/deploying-to-openshift
-$ mvn package
+cd ${ROOT_FOLDER}/deploying-to-openshift
+mvn package
 ```
 
 After you've run these commands, the file 'authors.war' will exist  in the 'target' directory, you can check with `ll target`.
 
 ```
-$ ll target
+ll target
 total 36
-drwxrwxr-x 7 uebele user 4096 Feb 20 09:07 ./
-drwxrwxr-x 6 uebele user 4096 Feb 20 07:35 ../
-drwxrwxr-x 4 uebele user 4096 Feb 20 09:07 authors/
--rw-rw-r-- 1 uebele user 5691 Feb 20 09:07 authors.war
-drwxrwxr-x 3 uebele user 4096 Feb 20 09:07 classes/
-drwxrwxr-x 3 uebele user 4096 Feb 20 09:07 generated-sources/
-drwxrwxr-x 2 uebele user 4096 Feb 20 09:07 maven-archiver/
-drwxrwxr-x 3 uebele user 4096 Feb 20 09:07 maven-status/
+drwxrwxr-x 7 ispandey user 4096 May 27 18:58 ./
+drwxrwxr-x 7 ispandey user 4096 May 27 18:57 ../
+drwxrwxr-x 4 ispandey user 4096 May 27 18:58 authors/
+-rw-rw-r-- 1 ispandey user 5693 May 27 18:58 authors.war
+drwxrwxr-x 3 ispandey user 4096 May 27 18:58 classes/
+drwxrwxr-x 3 ispandey user 4096 May 27 18:58 generated-sources/
+drwxrwxr-x 2 ispandey user 4096 May 27 18:58 maven-archiver/
+drwxrwxr-x 3 ispandey user 4096 May 27 18:58 maven-status/
 ```
 
 
@@ -174,7 +182,7 @@ The first parameter of the `oc new-build` command may look strange:
 the first part (s2i-open-liberty:latest) specifies the Open Liberty builder image, then comes a separator ('~'), then the specification of the local repository '/.' which contains the server.xml and authors.war needed for the build.
 
 ```
-$ oc new-app s2i-open-liberty:latest~/. --name=authors-s2i
+oc new-app s2i-open-liberty:latest~/. --name=authors-s2i
 ```
 
 After executing these commands you should see this:
@@ -209,19 +217,27 @@ It is not clear why the failed build is still showing, in OpenShift 3.11 it usua
 In the last step the route needs to be created as in the previous labs.
 
 ```
-$ oc expose svc/authors-s2i
-$ oc get route/authors-s2i
+oc get pods
+NAME                   READY   STATUS      RESTARTS   AGE
+authors-s2i-1-build    0/1     Error       0          7m5s
+authors-s2i-1-cnjg8    1/1     Running     0          3m1s
+authors-s2i-1-deploy   0/1     Completed   0          3m3s
+authors-s2i-2-build    0/1     Completed   0          3m38s
 ```
 
-To test the deployment, append '/openapi/ui' to the URL in the output of 'oc get route/authors-s2i' and open it in a browser.
+```
+oc expose svc/authors-s2i
+route.route.openshift.io/authors-s2i exposed
+```
 
----
+```
+oc get route/authors-s2i
+```
+When the user clicks on the route , you shoudl be able to see the Open Liberty welcome page.
 
+![](images/Route-hit.png.png)
 
-When you go back to the OpenShift Web Console and look in the overview of your project, you will see four instances of the authors microservice, deployed to OpenShift in four different ways:
+To test the deployment, append **'/openapi/ui'** to the URL in the output of 'oc get route/authors-s2i' and open it in a browser.
 
-![](images/os-overview-all.png)
-
----
 
 __Congratulation! You have completed this workshop!__

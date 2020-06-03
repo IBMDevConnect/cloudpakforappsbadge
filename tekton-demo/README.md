@@ -106,7 +106,8 @@ oc get pods --namespace tekton-pipelines --watch
 ```
 Use CTRL + C to exit watch mode.
 
-### 4) Now that Tekton is running, we need to define a Task with steps saying what to do. We also need a TaskRun definition saying which Task to run. We need two yaml files for that. How the files are named does not really matter, but I am using the convention to end them with -task.yaml and -task-run.yaml
+### 4) Now that Tekton is running, we need to define a Task with steps saying what to do. 
+We also need a TaskRun definition saying which Task to run. We need two yaml files for that. How the files are named does not really matter, but I am using the convention to end them with `-task.yaml` and `-task-run.yaml`
 A Task definition file named `echo-hello-world-task.yaml`:
 
 ```bash

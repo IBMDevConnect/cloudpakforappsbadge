@@ -41,7 +41,7 @@ The custom resources needed to define a pipeline are listed below:
 * `TaskRun`: the execution and result of running an instance of task
 * `PipelineRun`: the execution and result of running an instance of pipeline, which includes a number of `TaskRuns`
 
-![Tekton Architecture](/images/tekton-architecture.png)
+![Tekton Architecture](images/tekton-architecture.png)
 
 In short, in order to create a pipeline, one does the following:
 * Create custom or install [existing](https://github.com/tektoncd/catalog) reusable `Tasks`

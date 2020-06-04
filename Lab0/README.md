@@ -6,7 +6,8 @@
 
 1. Press the above `Deploy to IBM Cloud` button and then...
 
-   * Click `Create`.
+   * Click `Create` section
+   * Click on The `Delievery Pipeline` tab.
    * Click `New+` to create an IBM Cloud API Key.
    * Select your region, organization, and space (or use the defaults).
    * Click `Create`.

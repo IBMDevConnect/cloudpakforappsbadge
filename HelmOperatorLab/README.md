@@ -25,6 +25,12 @@ oc projects
 
 Always double check the namespace your Kubernetes is set for to make sure you are deploying the application where you would like it to be in your Kubernetes Cluster.
 
+### Clone the sample project
+
+```shell
+git clone https://github.com/ibm-cloud-architecture/cloudnative_sample_app
+```
+
 ### Application Deployment
 
 To deploy the Application we first want to ensure that we have helm template charts created. In this sample app we won’t have to create any templates, but we are going to modify the deployment.yaml using templates. Let’s start by doing that.

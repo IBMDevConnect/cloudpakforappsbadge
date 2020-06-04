@@ -39,21 +39,25 @@ In this section we will deploy the sample application that you downloaded. You c
 
 ### Deploy Kubernetes App using OpenShift Console
 
-With the OpenShift Console open, let’s **Create a Project** named **deploy-sample**
+With the OpenShift Console open, let’s **Create a Project** named **sample**
+
+Switch to Developer Portal of the Web Console:
+
+![os console dev](images/01_changeToDev.png)
 
 #### Create Project
 
-In the upper-right corner _click_ on **Create Project**
+In the Project dropdown, _click_ on **Create Project**
 
-![os console create](images/os-console-create.png)
+![os console create](images/02_changeToCreateProject.png)
 
-Next, fill in the name section with **deploy-sample** and _click_ **Create**
+Next, fill in the name section with **sample** and _click_ **Create**
 
-![project details](images/project-details.png)
+![project details](images/03_createProject.png)
 
-You will see that a new project was created in the list. _Click_ on the **Project Name**(deploy-sample).
+You will see that the project switched to your project (sample).
 
-Now you will see the project screen and it’s time to add the **deployment** and **service**.
+It’s time to add the **deployment** and **service**.
 
 #### Create Deployment & Service
 
@@ -61,51 +65,51 @@ In **Finder** or **File Explorer** navigate to the **chart/cloudnativesampleapp*
 
 Once there you will see two files: **deployment.yaml** and **service.yaml**
 
-Move back to the OpenShift console and find **Add to Project** in the upper-right corner. _Click_ it and select **Import YAML/JSON**.
+Move back to the OpenShift console and click on **+Add** in the upper-left corner. _Click_ it and select **YAML** tile.
 
-![importYAML](images/importYAML.png)
+![importYAML](images/04_fromYAML.png)
 
 Next an import screen will open and we need to pull up the **Finder** or **File Explorer** window with the **deployment.yaml** and **service.yaml** files.
 
 _Drag and Drop_ the **deployment.yaml** file first.
 
-![deployment](images/deployment.png)
+![deployment](images/05_ImportYAML.png)
 
-_Click_ **Create** and **Close** and you will see a new **greetings** deployment in the console.
+_Click_ **Create** and you will see a new **greetings** deployment in the console.
 
-![newDeployment](images/newDeployment.png)
+![newDeployment](images/06_deployment.png)
 
 For **Creating a Service** we are going to repeat the steps of **importing a YAML** just like a deployment, but instead of the **deployment.yaml** we will _Drag and Drop_ the **service.yaml**.
 
-![service](images/service.png)
+![service](images/07_serviceYAML.png)
 
-After Creating the Service let’s navigate to the **Services** page to view it.
+_Click_ **Create** 
+You can see your new service named **greeting-service**.
 
-![services page](images/services-page.png)
+![services page](images/08_service.png)
 
-On this page you can see your new service named **greeting-service**. You can click on the service to view details about it.
-
-![newService](images/newService.png)
 
 #### Create a Route
 
 Now we need to **Create a Route** for our new service to be reach by users outside of the cluster.
 
-On the service details page, find the **Create Route** button and _Click it_.
+On the Project details page (navigate from the options on the left), scroll down to find the **Inventory** section and _click_ on **Route**.
 
-![createRoute](images/createRoute.png)
+![createRoute](images/09_createRoute.png)
 
-This will open a form with values prepopulated for **Creating a Route**. No need to change any values so go ahead and _Click_ **Create**.
+This will open a form for **Creating a Route**. Fill in the required details and _Click_ **Create**.
 
-![serviceRoute](images/serviceRoute.png)
+![serviceRoute](images/10_Routedetails.png)
 
-A new route has now been created allowing us to access it from the internet. You can see the **Route’s Hostname**. That’s the new address for your service and we want to _Copy_ it.
+A new route has now been created allowing us to access it from the internet. You can see the **Route’s Hostname**. That’s the new address for your service and we want to _Copy_ it
+
+![serviceRoute](images/11_Link.png)
 
 Next, _Open a New Tab_ in your web browser and _paste_ the copied address in the search bar. **BEFORE pressing enter** append **/greeting?name=John** to the end of the address. Then _Press Enter_
 
 You should see the following:
 
-![applicationAccess](images/applicationAccess.png)
+![applicationAccess](images/12_app.png)
 
 Congrats! That’s you have successfully deployed an application on OpenShift.
 

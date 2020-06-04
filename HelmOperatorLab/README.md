@@ -23,6 +23,22 @@ View Namespace
 oc projects
 ```
 
+Create A Project
+
+Once logged in, we want to create a new project called deploy-sample in your OpenShift Cluster:
+
+```shell
+oc new-project deploy-sample
+```
+
+If you already have an existing project, you can select the project using:
+
+```shell
+oc project deploy-sample
+```
+
+Get the Sample Application from Github
+
 Always double check the namespace your Kubernetes is set for to make sure you are deploying the application where you would like it to be in your Kubernetes Cluster.
 
 ### Clone the sample project

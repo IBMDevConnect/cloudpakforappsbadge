@@ -35,6 +35,7 @@ You run these preparation steps only once. There is no need to redo these steps 
 
 		docker run -p 8000:8000 -v <your_local_path>:/data -v /var/run/docker.sock:/var/run/docker.sock -it ibmcloudacademy/cfmigrationtool bash
 
+This might take 15-20 minutes , depending on the internet connectivity at the user's end.
 
 2. From the bash shell of the Docker container, clone the repository containing the migration tool and sample application code:
 

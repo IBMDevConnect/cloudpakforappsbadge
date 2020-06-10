@@ -89,6 +89,6 @@ You can also access the Route from the Web Console as shown below
 
 This is the deployed application with the route.
 
-<kbd><img src="images/RouteOutput.png" /></kbd>
+<kbd><img src="images/Route1.png" /></kbd>
 
 ---

@@ -83,8 +83,12 @@ authors-git   authors-service-{project}.{subdomain}                  authors-git
 
 To test the deployment, append '/openapi/ui' to the URL in the output of 'oc get route' and open it in a browser.
 
-This is the deployed application with the route.
+You can also access the Route from the Web Console as shown below
 
 <kbd><img src="images/Route.png" /></kbd>
+
+This is the deployed application with the route.
+
+<kbd><img src="images/RouteOutput.png" /></kbd>
 
 ---

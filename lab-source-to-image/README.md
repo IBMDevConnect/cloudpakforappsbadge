@@ -44,6 +44,8 @@ $ ROOT_FOLDER=$(pwd)
 
 ## Pre-requisite 3. Get Access to OpenShift on the IBM Cloud
 
+NOTE: In case you have been provided a cluster link from the Developer Advocate for your session. Then you may skip this step mentioned in this lab and kindly follow steps mentioned during the session to get access to your specific cluster on the IBM Cloud.
+
 ### a. Open the OpenShift console. 
 
 1. Go back to the IBM Cloud Dashboard (https://cloud.ibm.com).

@@ -19,3 +19,30 @@ spec:
             value: "9080"
           - name: APPLICATION_NAME
             value: "greetings"
+
+
+For Openshift 4.4, use below
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "greetings-deployment"
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: "greetings"
+  template:
+    metadata:
+      labels:
+        app: "greetings"
+    spec:
+      containers:
+      - name: "greeting"
+        image: "ibmcase/greeting:1"
+        imagePullPolicy: "IfNotPresent"
+        env:
+          - name: PORT
+            value: "9080"
+          - name: APPLICATION_NAME
+            value: "greetings"

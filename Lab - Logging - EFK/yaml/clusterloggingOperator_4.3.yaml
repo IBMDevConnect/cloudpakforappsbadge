@@ -1,0 +1,153 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "2"
+  labels:
+  name: cluster-logging-operator
+  namespace: openshift-logging
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      name: cluster-logging-operator
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        alm-examples: |-
+          [
+            {
+              "apiVersion": "logging.openshift.io/v1",
+              "kind": "ClusterLogging",
+              "metadata": {
+                "name": "instance",
+                "namespace": "openshift-logging"
+              },
+              "spec": {
+                "managementState": "Managed",
+                "logStore": {
+                  "type": "elasticsearch",
+                  "elasticsearch": {
+                    "nodeCount": 3,
+                    "redundancyPolicy": "SingleRedundancy",
+                    "storage": {
+                      "storageClassName": "ibmc-block-gold",
+                      "size": "100G"
+                    }
+                  }
+                },
+                "visualization": {
+                  "type": "kibana",
+                  "kibana": {
+                    "replicas": 1
+                  }
+                },
+                "curation": {
+                  "type": "curator",
+                  "curator": {
+                    "schedule": "30 3 * * *"
+                  }
+                },
+                "collection": {
+                  "logs": {
+                    "type": "fluentd",
+                    "fluentd": {}
+                  }
+                }
+              }
+            },
+            {
+              "apiVersion": "logging.openshift.io/v1alpha1",
+              "kind": "LogForwarding",
+              "metadata": {
+                "name": "instance",
+                "namespace": "openshift-logging"
+              },
+              "spec": {
+                "outputs": [
+                  {
+                    "name": "clo-default-output-es",
+                    "type": "elasticsearch",
+                    "endpoint": "elasticsearch.openshift-logging.svc:9200",
+                    "secret": {
+                      "name": "elasticsearch"
+                    }
+                  }
+                ],
+                "pipelines": [
+                  {
+                    "name": "clo-default-app-pipeline",
+                    "inputSource": "logs.app",
+                    "outputRefs": ["clo-managaged-output-es"]
+                  },
+                  {
+                    "name": "clo-default-infra-pipeline",
+                    "inputSource": "logs.app",
+                    "outputRefs": ["clo-managaged-output-es"]
+                  }
+                ]
+              }
+            }
+          ]
+        capabilities: Seamless Upgrades
+        categories: OpenShift Optional, Logging & Tracing
+        certified: "false"
+        containerImage: registry.redhat.io/openshift4/ose-cluster-logging-operator@sha256:2e08105b56f4f3d2f1842fdc13571720aa36754e64885ccf55987ba69a14a079
+        createdAt: "2018-08-01T08:00:00Z"
+        description: The Cluster Logging Operator for OKD provides a means for configuring
+          and managing your aggregated logging stack.
+        olm.operatorGroup: openshift-logging-92zpg
+        olm.operatorNamespace: openshift-logging
+        olm.skipRange: '>=4.1.0 <4.3.20-202005121847'
+        olm.targetNamespaces: openshift-logging
+        support: AOS Logging
+      labels:
+        name: cluster-logging-operator
+    spec:
+      containers:
+      - command:
+        - cluster-logging-operator
+        env:
+        - name: WATCH_NAMESPACE
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.annotations['olm.targetNamespaces']
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        - name: OPERATOR_NAME
+          value: cluster-logging-operator
+        - name: ELASTICSEARCH_IMAGE
+          value: registry.redhat.io/openshift4/ose-logging-elasticsearch5@sha256:f02e4f75617b706d9b8e2dc06777aa572a443ccc3dd604ce4c21667f55725435
+        - name: FLUENTD_IMAGE
+          value: registry.redhat.io/openshift4/ose-logging-fluentd@sha256:a43ba2606777a8b6e3a45443bac1ae697600731b34c2abb84e35624ed8ef0270
+        - name: KIBANA_IMAGE
+          value: registry.redhat.io/openshift4/ose-logging-kibana5@sha256:8f3dc6d2e8c80fce660f65c3c7be1330d6a7b73d003998be8c333e993ccafc78
+        - name: CURATOR_IMAGE
+          value: registry.redhat.io/openshift4/ose-logging-curator5@sha256:da8943a7eacfd34ac8687ae607e11fb1ad1f538e4bdcae95f3ed70039be72f04
+        - name: OAUTH_PROXY_IMAGE
+          value: registry.redhat.io/openshift4/ose-oauth-proxy@sha256:5fc02d6d99203f2d437068315434b5ca926b992ec02e686ae8b47fbc5ddc89a1
+        - name: PROMTAIL_IMAGE
+          value: registry.redhat.io/openshift4/ose-promtail@sha256:1264aa92ebc6cccf46da3a35fbb54421b806dda5640c7e9706e6e815d13f509d
+        image: registry.redhat.io/openshift4/ose-cluster-logging-operator@sha256:648b96c77f8b0068bd8323a092cf06793ebd7566046a6ffb88af1d7fabadeaa3
+        imagePullPolicy: IfNotPresent
+        name: cluster-logging-operator
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: cluster-logging-operator
+      serviceAccountName: cluster-logging-operator
+      terminationGracePeriodSeconds: 30

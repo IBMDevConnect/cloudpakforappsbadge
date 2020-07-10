@@ -74,6 +74,11 @@ In openshift webconsole got to operators->installaed operators. Slect all projec
 ### Create openshift-logging operator
 oc create -f 7_cluster-logging-subscription.yaml
 
+Once operator is installed , go to opwnshift webconsole ->operator->Installed Operator . Click on cluster Logging and go to its yaml file 
+You will need to change the storage to ibmc-block-gold
+<img src="./img/chgoperatoryaml.png">
+
+
 ### change the VM of worker node 
 
 1. check the name of your cluter using command 

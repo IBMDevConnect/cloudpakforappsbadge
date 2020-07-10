@@ -51,7 +51,8 @@ Welcome! See 'oc help' to get started
     operatorgroup.operators.coreos.com/openshift-operators-redhat configured 
 ``
 ###  Create Elastic Search Operator
-``` oc create -f 3_elastic-search-subscription-operator.yaml 
+``` 
+oc create -f 3_elastic-search-subscription-operator.yaml 
 subscription.operators.coreos.com/elasticsearch-operator configured
 ```
 ### check if elastic operator is installed 

@@ -21,6 +21,10 @@ On the **Cloud Dashboard** in the resource summary section, select **OpenShift C
 
 In cluster list, select the cluster you would like to access. Make sure the cluster you select has a red circle OpenShift icon next to it.
 
+## Getting the Sample Application
+
+Download the sample application from Github: [Sample App](https://github.com/ibm-cloud-architecture/cloudnative_sample_app/tree/Basic-Tutorial)
+
 ### Creating a project using the Developer perspective in the web console
 
 With the OpenShift Console open, let’s **Create a Project**

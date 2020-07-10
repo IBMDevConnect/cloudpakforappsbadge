@@ -42,16 +42,16 @@ Welcome! See 'oc help' to get started
 ```
 
 ### Create openshift-operators-redhat namespace using below command
-``$oc create -f 1_elastic-search-operator-namespace.yaml 
+`` oc create -f 1_elastic-search-operator-namespace.yaml 
        namespace/openshift-operators-redhat configured
 ``
 
 ### Create openshift-operators-redhat OperatorGroup
-``$ oc create -f 2_elastic-search-operator-group.yaml 
+`` oc create -f 2_elastic-search-operator-group.yaml 
     operatorgroup.operators.coreos.com/openshift-operators-redhat configured 
 ``
 ###  Create Elastic Search Operator
-```$ oc create -f 3_elastic-search-subscription-operator.yaml 
+``` oc create -f 3_elastic-search-subscription-operator.yaml 
 subscription.operators.coreos.com/elasticsearch-operator configured
 ```
 ### check if elastic operator is installed 
@@ -61,14 +61,14 @@ In openshift webconsole got to operators->installaed operators. Slect all projec
 
 
 ## Create role name prometheus-k8s to access openshift-operators-redhat namespace
-```$ oc create -f 4_elastic-search-rbac.yaml```
+``` oc create -f 4_elastic-search-rbac.yaml```
 
 ### Create openshift-logging namesapce
-```$ oc create -f -f 5_cluster-logging-namespace.yaml ```
+``` oc create -f -f 5_cluster-logging-namespace.yaml ```
 
 ### Create openshift-logging operatorGroup
 
-```$ oc create -f 6_cluster-logging-operator-group.yaml```
+``` oc create -f 6_cluster-logging-operator-group.yaml```
 
 ### change the VM of worker node 
 

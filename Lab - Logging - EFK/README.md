@@ -132,7 +132,7 @@ Delete any cluster logging operator deployment
 
 Create cluster logging operator
 
-```oc create clusterloggingOperator_4.3.yaml```
+```oc create -f clusterloggingOperator_4.3.yaml```
 Create cluster logging Instance
 ```oc create -f  clusterlogginginstanceIBM.yaml ```
 

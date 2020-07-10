@@ -27,12 +27,12 @@ https://shell.cloud.ibm.com
 ### Start with cloning the directory which contain all the required yaml file 
 ``` git clone https://github.com/shiprajain14/EFKOpenShift.git ```
 ### go to yaml folder
-``` $ cd EFKOpenShift/yaml```
+``` cd EFKOpenShift/yaml ```
 you will find few of the yamls which we will use to create our resources
 
 ### connect you shell to openshift cluster 
 copy the openshift logging token copied from openshift console 
-``` $ oc login --token=ysBBmHyQJnWW4WN7B-n8uOCMVu0e_KenYKzUejM_sfI --server=https://c100-e.au-syd.containers.cloud.ibm.com:30142
+``` oc login --token=ysBBmHyQJnWW4WN7B-n8uOCMVu0e_KenYKzUejM_sfI --server=https://c100-e.au-syd.containers.cloud.ibm.com:30142
 Logged into "https://c100-e.au-syd.containers.cloud.ibm.com:30142" as "IAM#shiprajain.jain@gmail.com" using the token provided.
 
 You have access to 59 projects, the list has been suppressed. You can list all projects with 'oc projects'

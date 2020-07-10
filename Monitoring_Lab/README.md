@@ -53,9 +53,12 @@ On the left click on _+Add_ and select **YAML**
 
 In **Finder** or **File Explorer** navigate to the **chart/cloudnativesampleapp** directory of the sample application.
 
+``` git clone -b "Basic-Tutorial" https://github.com/ibm-cloud-architecture/cloudnative_sample_app```
+```cd cloudnative_sample_app/chart/cloudnativesampleapp```
+
 Once there you will see two files: **deployment.yaml** and **service.yaml**
 
-_Drag and Drop_ the **deployment.yaml** file first.
+_Drag and Ddrop / copy the **deployment.yaml** file first.
 
 ![importYAML](images/Pic4.png)
 

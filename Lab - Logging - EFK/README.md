@@ -123,7 +123,9 @@ deployment.extensions/olm-operator scaled
 
 ```
 
-delete any existing cluster logging instance 
+delete any existing cluster logging instance  and deployment
+
+```oc delete clusterlogging -n openshift-logging instance```
 
 ``` oc delete deployment cluster-logging-operator```
 

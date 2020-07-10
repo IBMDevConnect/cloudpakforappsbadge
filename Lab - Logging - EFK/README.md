@@ -70,6 +70,9 @@ In openshift webconsole got to operators->installaed operators. Slect all projec
 
 ``` oc create -f 6_cluster-logging-operator-group.yaml```
 
+### Create openshift-logging operator
+oc create -f 7_cluster-logging-subscription.yaml
+
 ### change the VM of worker node 
 
 1. check the name of your cluter using command 
@@ -101,23 +104,24 @@ change the value of vm.max_map_count to 263754
 follow this step 4 for all inspct node
 
 
-### Create Cluster logging operator 
+### Create Cluster logging deplyment operator 
 Before creating cluster logging operator we need to do certian pre-requisites 
 
 ``` oc project openshift-logging ```
 
-```$watch -n 5 kubectl -n openshift-operator-lifecycle-manager scale --replicas 0 deploy olm-operator
-Every 5.0s: kubectl -n openshift-operator-lifecycle-manager scale --replicas 0 deploy olm-operator                                        Thu Jul  9 08:52:41 2020
+```
+$ kubectl -n openshift-operator-lifecycle-manager scale --replicas 0 deploy olm-operator
+
 
 deployment.extensions/olm-operator scaled
 
 ```
-do a ctrl c to come out 
+
 delete any existing cluster logging instance 
 
 ``` oc delete deployment cluster-logging-operator```
 
-Delete any cluster logging operator
+Delete any cluster logging operator deployment
 ```oc delete deployment cluster-logging-operator```
 
 Create cluster logging operator

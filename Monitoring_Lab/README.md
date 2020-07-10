@@ -90,11 +90,11 @@ On the service details page, find the **Create Route** button and _Click it_.
 
 ![createRoute](images/Routes2.png)
 
-This will open a form with values prepopulated for **Creating a Route**. Give the service name, select your service which is just created and _Click_ **Create**.
+This will open a form with values prepopulated for **Creating a Route**. Give the service name, select your service which is just created.
 
 ![serviceRoute](images/Routes3.png)
 
-Select the Target Port
+Select the Target Port and _Click_ **Create**.
 
 ![serviceRoute](images/Route4.png)
 

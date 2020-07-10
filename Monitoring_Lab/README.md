@@ -1,9 +1,18 @@
 ## Prerequisites
 
-- Read and understand resource groups: [IBM Cloud Resource Groups](https://cloud.ibm.com/docs/resources?topic=resources-rgs)
+Mandatory:
+
 - You will need an IBM Account for [IBM Cloud](https://cloud.ibm.com/)
+- Getting the Sample Application:
+Download the sample application from Github: [Sample App](https://github.com/ibm-cloud-architecture/cloudnative_sample_app/tree/Basic-Tutorial)
+
+Optional:
+
+- Read and understand resource groups: [IBM Cloud Resource Groups](https://cloud.ibm.com/docs/resources?topic=resources-rgs)
 - Downloaded and installed the OpenShift CLI at [OpenShift CLI Installation](https://OpenShift.io/docs/tasks/tools/install-kubectl/). Follow the instructions for your computer’s operating system.
 - Downloaded and installed the IBM Cloud CLI at [IBM Cloud CLI Installation](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step1-install-idt). Follow the instructions for your computer’s operating system.
+
+
 
 ## IBM Cloud Login
 
@@ -20,10 +29,6 @@ On the **Cloud Dashboard** in the resource summary section, select **OpenShift C
 ![CL Dash Kube](images/CL_Dash_Kube.png)
 
 In cluster list, select the cluster you would like to access. Make sure the cluster you select has a red circle OpenShift icon next to it.
-
-## Getting the Sample Application
-
-Download the sample application from Github: [Sample App](https://github.com/ibm-cloud-architecture/cloudnative_sample_app/tree/Basic-Tutorial)
 
 ### Creating a project using the Developer perspective in the web console
 

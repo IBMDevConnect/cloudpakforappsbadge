@@ -38,11 +38,11 @@ With the OpenShift Console open, let’s **Create a Project**
 
 You can create a project using the Developer perspective, as follows:
 
-**Step 1.** In the **Add** view, click the **Project** drop-down menu to see a list of all available projects. Select **Create Project**.
+In the **Add** view, click the **Project** drop-down menu to see a list of all available projects. Select **Create Project**.
 
 ![os console create](images/Add.png)
 
-**Step 2.** In the **Create Project** dialog box, enter a unique name for the **Name** field. For example, enter **myproject** as the name of the project in the **Name** field and click on **Create**
+In the **Create Project** dialog box, enter a unique name for the **Name** field. For example, enter **myproject** as the name of the project in the **Name** field and click on **Create**
 
 ![os console create](images/Create.png)
 

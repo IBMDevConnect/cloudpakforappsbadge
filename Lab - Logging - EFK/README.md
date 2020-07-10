@@ -25,7 +25,7 @@ You can do this lab either on local terminal ot ibmcloud webshell
 https://shell.cloud.ibm.com
 
 ### Start with cloning the directory which contain all the required yaml file 
-````$ git clone https://github.com/shiprajain14/EFKOpenShift.git ```
+``` git clone https://github.com/shiprajain14/EFKOpenShift.git ```
 ### go to yaml folder
 ``` $ cd EFKOpenShift/yaml```
 you will find few of the yamls which we will use to create our resources

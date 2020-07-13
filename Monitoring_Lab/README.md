@@ -1,9 +1,18 @@
 ## Prerequisites
 
-- Read and understand resource groups: [IBM Cloud Resource Groups](https://cloud.ibm.com/docs/resources?topic=resources-rgs)
+Mandatory:
+
 - You will need an IBM Account for [IBM Cloud](https://cloud.ibm.com/)
+- Getting the Sample Application:
+Download the sample application from Github: [Sample App](https://github.com/ibm-cloud-architecture/cloudnative_sample_app/tree/Basic-Tutorial)
+
+Optional:
+
+- Read and understand resource groups: [IBM Cloud Resource Groups](https://cloud.ibm.com/docs/resources?topic=resources-rgs)
 - Downloaded and installed the OpenShift CLI at [OpenShift CLI Installation](https://OpenShift.io/docs/tasks/tools/install-kubectl/). Follow the instructions for your computer’s operating system.
 - Downloaded and installed the IBM Cloud CLI at [IBM Cloud CLI Installation](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started#step1-install-idt). Follow the instructions for your computer’s operating system.
+
+
 
 ## IBM Cloud Login
 
@@ -29,11 +38,11 @@ With the OpenShift Console open, let’s **Create a Project**
 
 You can create a project using the Developer perspective, as follows:
 
-**Step 1.** In the **Add** view, click the **Project** drop-down menu to see a list of all available projects. Select **Create Project**.
+In the **Add** view, click the **Project** drop-down menu to see a list of all available projects. Select **Create Project**.
 
 ![os console create](images/Add.png)
 
-**Step 2.** In the **Create Project** dialog box, enter a unique name for the **Name** field. For example, enter **myproject** as the name of the project in the **Name** field and click on **Create**
+In the **Create Project** dialog box, enter a unique name for the **Name** field. For example, enter **myproject** as the name of the project in the **Name** field and click on **Create**
 
 ![os console create](images/Create.png)
 
@@ -51,7 +60,7 @@ In **Finder** or **File Explorer** navigate to the **chart/cloudnativesampleapp*
 
 Once there you will see two files: **deployment.yaml** and **service.yaml**
 
-_Drag and Drop_ the **deployment.yaml** file first.
+Drag and drop the **deployment.yaml** file first.
 
 ![importYAML](images/Pic4.png)
 
@@ -81,11 +90,11 @@ On the service details page, find the **Create Route** button and _Click it_.
 
 ![createRoute](images/Routes2.png)
 
-This will open a form with values prepopulated for **Creating a Route**. Give the service name, select your service which is just created and _Click_ **Create**.
+This will open a form with values prepopulated for **Creating a Route**. Give the service name, select your service which is just created.
 
 ![serviceRoute](images/Routes3.png)
 
-Select the Target Port
+Select the Target Port and _Click_ **Create**.
 
 ![serviceRoute](images/Route4.png)
 

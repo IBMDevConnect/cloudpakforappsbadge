@@ -33,6 +33,10 @@ From this screen there are two options. One is using the **OpenShift Console** a
 
 Download the sample application from Github: [Sample App](https://github.com/IBMDevConnect/cloudpakforappsbadge/tree/master/Lab%20-%20Openshift%20-%20Getting%20Started/cloudnativesampleapp)
 
+```git clone https://github.com/ibm-cloud-architecture/cloudnative_sample_app```
+</br>
+```cd chart/cloudnativesampleapp```
+
 ## Deploying the Sample Application
 
 In this section we will deploy the sample application that you downloaded. You can follow the **Console** section to deploy it via the **OpenShift Console** and the **CLI** section for the command line.

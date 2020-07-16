@@ -33,7 +33,7 @@ From this screen there are two options. One is using the **OpenShift Console** a
 
 Download the sample application from Github: [Sample App](https://github.com/IBMDevConnect/cloudpakforappsbadge/tree/master/Lab%20-%20Openshift%20-%20Getting%20Started/cloudnativesampleapp)
 
-```git clone https://github.com/ibm-cloud-architecture/cloudnative_sample_app```
+```git clone -b "Basic-Tutorial" https://github.com/ibm-cloud-architecture/cloudnative_sample_app```
 </br>
 ```cd chart/cloudnativesampleapp```
 

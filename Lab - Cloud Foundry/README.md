@@ -1,6 +1,6 @@
-# Deploy simple Node.js application
+# Deploy simple Node.js application on IBM Cloud
 
-### Pre-requisite: Create IBM Cloud Account [IBM Cloud](https://bit.ly/cloudregjune4). Please register with your Organization Email ID.
+### Pre-requisite: Create IBM Cloud Account [IBM Cloud](https://ibm.biz/BdqAuc). Please register with your Organization Email ID.
 
 [![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/IBMDevConnect/node-hello.git&branch=master)
 

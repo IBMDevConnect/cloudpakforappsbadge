@@ -18,7 +18,7 @@ Session | Topic | Lab
  Session 5     | Discussion on Self Paced Program  | -
  Session 6     | Question and Answer Session | -
 
-Additional Labs:
+## Additional Labs:
 
 Topic | Lab
 --- | ---

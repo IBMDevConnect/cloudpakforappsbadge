@@ -6,6 +6,8 @@
 
 ## Workshop content
 
+## Demo
+
 # Cloud Pak for Applications Workshop
 
 

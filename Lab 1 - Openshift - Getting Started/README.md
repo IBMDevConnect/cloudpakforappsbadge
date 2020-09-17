@@ -31,7 +31,7 @@ From this screen there are two options. One is using the **OpenShift Console** a
 
 ## Getting the Sample Application
 
-Download the sample application from Github: [Sample App](https://github.com/IBMDevConnect/cloudpakforappsbadge/tree/master/Lab%20-%20Openshift%20-%20Getting%20Started/cloudnativesampleapp)
+Download the sample application from Github: [Sample App](https://github.com/ibm-cloud-architecture/cloudnative_sample_app/tree/Basic-Tutorial)
 
 ```git clone -b "Basic-Tutorial" https://github.com/ibm-cloud-architecture/cloudnative_sample_app```
 </br>
@@ -87,7 +87,7 @@ For **Creating a Service** we are going to repeat the steps of **importing a YAM
 
 ![service](images/07_serviceYAML.png)
 
-_Click_ **Create** 
+_Click_ **Create**
 You can see your new service named **greeting-service**.
 
 ![services page](images/08_service.png)
@@ -240,5 +240,3 @@ You have successfully completed this lab! Let’s take a look at what you learne
 - Created a Service on OpenShift.
 - Created a Route on OpenShift.
 - Accessed an application through a web browser.
-
-

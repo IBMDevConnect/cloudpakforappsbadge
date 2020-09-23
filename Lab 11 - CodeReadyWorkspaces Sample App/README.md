@@ -12,53 +12,45 @@
 
 ![Cloud Login](images/Picture1.png)
 
-**Step 5:**  You can create the workspace as shown in the step 4  by selecting one of the template stacks displace. Alternatively navigate to the Workspace and click on the Add workspace button
+**Step 5:**  You can create the workspace as shown in the step 4  by selecting one of the template stacks displace. Alternatively navigate to the Custom Workspace and select the NodeJS Express option for the Devfile
 
 ![Cloud Login](images/Picture2.png)
 
-**Step 6:** Provide the workspace as part of the Name Field
-
-![Cloud Login](images/Picture3.png)
-
-**Step 7:** Click on remove button: in the add and import project, basically we are going to create a empty project.
-
-![Cloud Login](images/Picture4.png)
-
-**Step 8:** Click on create and open button. Workspace will start loading. This may take few minutes as the Container and plug-ins related to the stack has be created and deployment.  Once the Workspace is created  the welcome will be displayed as depicted below
+**Step 6:** Click on create and open button. Workspace will start loading. This may take few minutes as the Container and plug-ins related to the stack has be created and deployment.  Once the Workspace is created  the welcome will be displayed as depicted below
 
 ![Cloud Login](images/Picture5.png)
 
-**Step 9:** Open the terminal by selecting terminal from menu:
+**Step 7:** Open the terminal by selecting terminal from menu:
 
 ![Cloud Login](images/Picture6.png)
 
-**Step 10:** Click on open the terminal and select maven
+**Step 8:** Click on open the terminal and select maven
 
 ![Cloud Login](images/Picture7.png)
 
-**Step 11:** Clone the project
+**Step 9:** Clone the project
 
 ```
 git clone https://github.com/IBMDevConnect/node-hello
 ```
 
-**Step 12:** Get into the directory
+**Step 10:** Get into the directory
 
 ```
 cd node-hello
 ```
 
-**Step 13:** Run the application
+**Step 11:** Run the application
 
 ```
 node index.js
 ```
 
-**Step 14:** There will be a pop-up, please click on Open Link
+**Step 12:** There will be a pop-up, please click on Open Link
 
 ![Cloud Login](images/Pic.png)
 
-**Step 15:** You should be able to get the output as shown below:
+**Step 13:** You should be able to get the output as shown below:
 
 ![Cloud Login](images/Output.png)
 

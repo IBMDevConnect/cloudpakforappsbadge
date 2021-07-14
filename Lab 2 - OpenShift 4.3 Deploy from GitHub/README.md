@@ -28,7 +28,7 @@ oc new-app https://github.com/IBM/openshift-on-ibm-cloud-workshops --context-dir
 
 As result you'll get this output.
 
-<kbd><img src="images/image1.png" /></kbd>
+<kbd><img src="images/Picture 1.png" /></kbd>
 
 A build will be triggered and run on OpenShift. To verify the build on OpenShift, open the OpenShift Web Console as shown below.
 

@@ -15,7 +15,7 @@ Read the [documentation](https://docs.openshift.com/enterprise/3.0/dev_guide/new
 Create a new project 'deployment-from-github'.
 
 ```
-$ oc new-project deployment-from-github
+oc new-project deployment-from-github
 ```
 
 ### Step 2
@@ -23,7 +23,7 @@ $ oc new-project deployment-from-github
 Create a new application and refer to a subdirectory in the GitHub repo.
 
 ```
-$ oc new-app https://github.com/IBM/openshift-on-ibm-cloud-workshops --context-dir=deploying-to-openshift --name=authors-git
+oc new-app https://github.com/IBM/openshift-on-ibm-cloud-workshops --context-dir=deploying-to-openshift --name=authors-git
 ```
 
 As result you'll get this output.
@@ -70,8 +70,8 @@ authors-git        ClusterIP   172.21.142.205   <none>       3000/TCP   13m
 In the last step create a route.
 
 ```
-$ oc expose svc authors-git
-$ oc get route
+oc expose svc authors-git
+oc get route
 ```
 
 You should see the followig output:
